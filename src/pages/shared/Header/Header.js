@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 
@@ -6,8 +6,10 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../UserContext/UserContext";
 import "./Header.css";
 const Header = () => {
+  const { user, logOutUser } = useContext(AuthContext);
   return (
     <>
       <Navbar
@@ -41,9 +43,19 @@ const Header = () => {
               <Link to="/Register" className="text-white">
                 Register
               </Link>
-              <Link to="/login" className="text-white">
-                Login
-              </Link>
+              {user && user?.uid ? (
+                <Button
+                  onClick={logOutUser}
+                  className="mb-2 fw-bold text-white"
+                  variant="dark"
+                >
+                  Logout
+                </Button>
+              ) : (
+                <Link className="mb-2 fw-bold text-white" to="/login">
+                  Login
+                </Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
