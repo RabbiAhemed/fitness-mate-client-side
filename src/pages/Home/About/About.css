@@ -1,0 +1,10 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  /* justify-content:space-around; */
+}
+
+.bing {
+  /* height: 10%; */
+  width: 25%;
+}
