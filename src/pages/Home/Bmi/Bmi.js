@@ -22,7 +22,7 @@ const Bmi = () => {
   };
   return (
     <div>
-      <h1>CALCULATE YOUR BMI </h1>
+      <h1>CALCULATE YOUR BMI</h1>
       <input
         type="text"
         onChange={(e) => setHeight(e.target.value)}
