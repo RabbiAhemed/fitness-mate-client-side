@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 const Register = () => {
   return (
-    <div className="w-50 mx-auto">
+    <div className="w-50 mx-auto my-5">
       <h2>Register</h2>
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">

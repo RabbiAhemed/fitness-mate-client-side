@@ -5,7 +5,7 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Login = () => {
   return (
-    <div className="w-50 mx-auto">
+    <div className="w-50 mx-auto my-5">
       <h2>Login</h2>
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
