@@ -1,0 +1,9 @@
+.main-logo {
+  width: 20%;
+  height: 10%;
+}
+
+.nav-items a {
+  text-decoration: none;
+  padding: 5%;
+}
