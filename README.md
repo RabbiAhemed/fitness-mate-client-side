@@ -1,6 +1,6 @@
 # FITNESS MATE
 
-A personal individual fitness trainer website
+An individual personal fitness trainer website
 
 Live Website Link [https://fitness-mate-36ca1.web.app/](https://fitness-mate-36ca1.web.app/)
 
