@@ -15,7 +15,7 @@ const ThreeReview = ({ services }) => {
       </div>
       <div className="text-center my-3">
         <Link to="/services">
-          <Button variant="warning">See ALl</Button>
+          <Button variant="warning">See All</Button>
         </Link>
       </div>
     </div>
