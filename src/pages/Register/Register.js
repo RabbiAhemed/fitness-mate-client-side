@@ -39,7 +39,7 @@ const Register = () => {
           <Form.Control
             type="text"
             name="name"
-            placeholder="Enter name"
+            placeholder="please enter your name"
             required
           />
         </Form.Group>
@@ -47,7 +47,7 @@ const Register = () => {
           <Form.Control
             type="text"
             name="image"
-            placeholder="Enter url"
+            placeholder="please enter your image url"
             required
           />
         </Form.Group>
@@ -56,7 +56,7 @@ const Register = () => {
           <Form.Control
             type="email"
             name="email"
-            placeholder="Enter email"
+            placeholder="please enter your email"
             required
           />
         </Form.Group>
@@ -65,7 +65,7 @@ const Register = () => {
           <Form.Control
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="please type your password"
             required
           />
         </Form.Group>
@@ -73,7 +73,7 @@ const Register = () => {
           Register
         </Button>
         <p className="small fw-bold mt-2 pt-1 mb-0">
-          Already have an account?
+          Already registered with us?
           <Link to="/login" className="link-success">
             Login
           </Link>
