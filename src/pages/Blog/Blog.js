@@ -1,10 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-
+import "./Blog.css";
 const Blog = () => {
   return (
     <div>
-      <div className="m-2">
+      <div className="m-2 blogs">
         <div>
           <h2>Difference between SQL and NoSQL</h2>
           <p>
