@@ -6,8 +6,8 @@ import "./ThreeReview.css";
 const ThreeReview = ({ services }) => {
   console.log(typeof services);
   return (
-    <div>
-      <h2>My most popular plans</h2>
+    <div className="my-5 mx-5">
+      <h2 className="my-4">My most popular plans</h2>
       <div className="threeService">
         {services.slice(0, 3).map((service) => (
           <Service key={service.service_id} service={service}></Service>
