@@ -3,8 +3,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../UserContext/UserContext";
 const Login = () => {
+  useTitle("Login-FITNESS MATE");
   const { googleSignIn, signInUser, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();

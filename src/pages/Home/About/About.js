@@ -1,6 +1,8 @@
 import React from "react";
+import useTitle from "../../../hooks/useTitle";
 import "./About.css";
 const About = () => {
+  useTitle("About-FITNESS MATE");
   return (
     <div className="about-section mx-auto w-75 my-4">
       <img

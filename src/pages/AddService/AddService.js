@@ -4,10 +4,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import useTitle from "../../hooks/useTitle";
 const AddService = () => {
   const [addService, setAddService] = useState();
   const notify = () => toast("congratulations");
-
+  useTitle("Add service-FITNESS MATE");
   const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;

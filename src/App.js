@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Main from "./layout/Main";
 import AddService from "./pages/AddService/AddService";
+import Blog from "./pages/Blog/Blog";
 import Details from "./pages/Details/Details";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
@@ -53,6 +54,10 @@ function App() {
         {
           path: "/login",
           element: <Login></Login>,
+        },
+        {
+          path: "/blog",
+          element: <Blog></Blog>,
         },
       ],
     },

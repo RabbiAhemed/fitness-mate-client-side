@@ -35,15 +35,6 @@ const UserContext = ({ children }) => {
     signOut(auth);
   };
 
-  const displayName = (name) => {
-    setLoading(true);
-    return updateProfile(auth.currentUser, { displayName: name });
-  };
-  const displayPicture = (picUrl) => {
-    setLoading(true);
-    return updateProfile(auth.currentUser, { photoURL: picUrl });
-  };
-
   const googleSignIn = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
@@ -67,8 +58,7 @@ const UserContext = ({ children }) => {
 
     signInUser,
     logOutUser,
-    displayName,
-    displayPicture,
+
     loading,
     setUser,
   };

@@ -45,7 +45,7 @@ const Header = () => {
                 </Link>
               )}
 
-              <Link to="/blogs" className="text-white">
+              <Link to="/blog" className="text-white">
                 Blogs
               </Link>
             </Nav>

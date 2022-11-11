@@ -7,12 +7,9 @@ const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
   if (loading) {
-    // console.log("loading");
-
     return <Spinner animation="border" role="status"></Spinner>;
   }
 
-  // console.log(user);
   if (!user) {
     return <Navigate to="/login" state={{ from: location }} replace></Navigate>;
   }

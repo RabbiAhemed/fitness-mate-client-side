@@ -3,9 +3,11 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import { Link } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../UserContext/UserContext";
 const Register = () => {
-  const { createUser, displayName, displayPicture } = useContext(AuthContext);
+  useTitle("Register-FITNESS MATE");
+  const { createUser } = useContext(AuthContext);
   const [success, setSuccess] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -19,25 +21,6 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
 
-        displayName(name)
-          .then(() => {
-            // Profile updated!
-            // ...
-          })
-          .catch((error) => {
-            // An error occurred
-            // ...
-          });
-        displayPicture(imageUrl)
-          .then(() => {
-            // Profile updated!
-            // ...
-          })
-          .catch((error) => {
-            // An error occurred
-            // ...
-          });
-        // user.displayName = name;
         setSuccess(true);
 
         form.reset();

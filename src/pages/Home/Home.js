@@ -6,10 +6,12 @@ import About from "./About/About";
 import "./Home.css";
 import ThreeReview from "../ThreeReview/ThreeReview";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const Home = () => {
   const services = useLoaderData();
   console.log(services);
+  useTitle("Home-FITNESS MATE");
   return (
     <div>
       <Banner></Banner>
