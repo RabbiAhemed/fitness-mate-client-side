@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
 
 const Bmi = () => {
   const [bmi, setBmi] = useState();
@@ -33,7 +34,9 @@ const Bmi = () => {
         onChange={(e) => setWeight(e.target.value)}
         placeholder="Weight in kg"
       />
-      <button onClick={handleBmi}>Calculate</button>
+      <Button variant="info" onClick={handleBmi}>
+        Calculate
+      </Button>
       <h1>{bmi}</h1>
       <h2>{info}</h2>
     </div>

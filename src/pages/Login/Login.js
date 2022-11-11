@@ -19,6 +19,23 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         // console.log(result.user);
+        const currentUser = {
+          email: user.email,
+        };
+        console.log(currentUser);
+        // jwt token work
+        fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("jwt-token", data.token);
+          });
+
         setUser(user);
         form.reset();
         navigate(from, { replace: true });
@@ -35,11 +52,15 @@ const Login = () => {
       <h2>Login</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Control type="email" name="email" placeholder="Enter email" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
         </Form.Group>
         <Button variant="primary" type="submit">
           Login

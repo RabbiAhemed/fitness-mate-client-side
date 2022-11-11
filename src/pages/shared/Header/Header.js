@@ -31,16 +31,26 @@ const Header = () => {
               <Link to="/" className="text-white">
                 Home
               </Link>
-              <Link to="/About" className="text-white">
-                About
+              <Link to="/services" className="text-white">
+                Services
               </Link>
+              {user && (
+                <Link to="/addService" className="text-white">
+                  AddService
+                </Link>
+              )}
+              {user && (
+                <Link to="/myReviews" className="text-white">
+                  MyReviews
+                </Link>
+              )}
 
-              <Link to="/Blogs" className="text-white">
+              <Link to="/blogs" className="text-white">
                 Blogs
               </Link>
             </Nav>
             <Nav className="nav-items">
-              <Link to="/Register" className="text-white">
+              <Link to="/register" className="text-white">
                 Register
               </Link>
               {user && user?.uid ? (

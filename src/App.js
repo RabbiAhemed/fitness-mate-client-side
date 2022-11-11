@@ -1,9 +1,14 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Main from "./layout/Main";
+import AddService from "./pages/AddService/AddService";
+import Details from "./pages/Details/Details";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import Services from "./pages/Services/Services";
+import ThreeReview from "./pages/ThreeReview/ThreeReview";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 function App() {
   const router = createBrowserRouter([
@@ -14,6 +19,32 @@ function App() {
         {
           path: "/",
           element: <Home></Home>,
+          loader: async () => {
+            return fetch("http://localhost:5000/services");
+          },
+        },
+
+        {
+          path: "/services",
+          element: <Services></Services>,
+          loader: async () => {
+            return fetch("http://localhost:5000/services");
+          },
+        },
+        {
+          path: "/service/:id",
+          element: <Details></Details>,
+          loader: async ({ params }) => {
+            return fetch(`localhost/5000/service/${params.id}`);
+          },
+        },
+        {
+          path: "/addService",
+          element: (
+            <PrivateRoute>
+              <AddService></AddService>
+            </PrivateRoute>
+          ),
         },
         {
           path: "/register",
