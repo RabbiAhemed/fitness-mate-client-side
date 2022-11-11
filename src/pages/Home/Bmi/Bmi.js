@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
-
+import "./Bmi.css";
 const Bmi = () => {
   const [bmi, setBmi] = useState();
   const [info, setInfo] = useState();
@@ -22,23 +22,33 @@ const Bmi = () => {
     }
   };
   return (
-    <div>
+    <div className="bmi">
       <h1>CALCULATE YOUR BMI</h1>
+      <br />
       <input
         type="text"
         onChange={(e) => setHeight(e.target.value)}
         placeholder="height in cm"
       />
+      <br />
+      <br />
       <input
         type="text"
         onChange={(e) => setWeight(e.target.value)}
         placeholder="Weight in kg"
       />
-      <Button variant="info" onClick={handleBmi}>
+      <br />
+      <br />
+      <Button variant="light" className="fw-bold" onClick={handleBmi}>
         Calculate
       </Button>
-      <h1>{bmi}</h1>
-      <h2>{info}</h2>
+      <br />
+      <br />
+      <br />
+      <div className="bg-info w-25 mx-auto p-2 rounded">
+        <h1>Your BMI is = {bmi}</h1>
+        <h2>You are {info}</h2>
+      </div>
     </div>
   );
 };
