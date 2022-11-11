@@ -24,7 +24,7 @@ const AddService = () => {
       ...addService,
     };
     // addService
-    fetch(`http://localhost:5000/addService`, {
+    fetch(`https://fitness-mate-server-side.vercel.app/addService`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

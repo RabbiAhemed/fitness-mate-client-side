@@ -93,10 +93,6 @@ const Blog = () => {
             and sends the response back to the client by itself.
           </p>
         </div>
-        <div>
-          <h2></h2>
-          <p></p>
-        </div>
       </div>
     </div>
   );

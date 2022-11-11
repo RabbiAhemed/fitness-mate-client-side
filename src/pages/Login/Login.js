@@ -26,7 +26,7 @@ const Login = () => {
         };
         console.log(currentUser);
         // jwt token work
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://fitness-mate-server-side.vercel.app/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",
