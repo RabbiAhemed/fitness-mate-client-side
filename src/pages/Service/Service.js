@@ -7,11 +7,11 @@ import "react-photo-view/dist/react-photo-view.css";
 import { Link, useNavigate } from "react-router-dom";
 import "./Service.css";
 const Service = ({ service }) => {
-  const { image, name, tagline, price, details, service_id } = service;
-  const navigate = useNavigate();
-  const navigateToServiceDetail = (service_id) => {
-    navigate(`/service/${service_id}`);
-  };
+  const { image, name, tagline, price, details, _id } = service;
+  // const navigate = useNavigate();
+  // const navigateToServiceDetail = (_id) => {
+  //   navigate(`/service/${_id}`);
+  // };
 
   return (
     <Card className="card">
@@ -30,10 +30,10 @@ const Service = ({ service }) => {
         <small className="text-muted fw-bold">{tagline}</small>
         <Card.Text className="fw-semibold">{details.slice(0, 100)}</Card.Text>
         <p className="fw-bold">Price: ${price}</p>
-        <Link to={`/service/${service_id}`}>
+        <Link to={`/service/${_id}`}>
           <Button
             className="fw-bold"
-            onClick={() => navigateToServiceDetail(service_id)}
+            // onClick={() => navigateToServiceDetail(_id)}
             variant="primary"
           >
             View Details

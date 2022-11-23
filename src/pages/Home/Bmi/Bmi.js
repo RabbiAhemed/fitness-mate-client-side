@@ -23,7 +23,7 @@ const Bmi = () => {
   };
   return (
     <div className="bmi">
-      <h1>CALCULATE YOUR BMI</h1>
+      <h1 className="fw-bold text-light">CALCULATE YOUR BMI</h1>
       <br />
       <input
         type="text"
@@ -45,9 +45,9 @@ const Bmi = () => {
       <br />
       <br />
       <br />
-      <div className="bg-info w-25 mx-auto p-2 rounded">
-        <h1>Your BMI is = {bmi}</h1>
-        <h2>You are {info}</h2>
+      <div className=" w-25 mx-auto rounded">
+        <h1> {bmi}</h1>
+        <h2> {info}</h2>
       </div>
     </div>
   );

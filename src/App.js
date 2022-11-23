@@ -6,6 +6,7 @@ import Blog from "./pages/Blog/Blog";
 import Details from "./pages/Details/Details";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import MyReview from "./pages/MyReview/MyReview";
 import NotFound from "./pages/NotFound/NotFound";
 import Register from "./pages/Register/Register";
 import Services from "./pages/Services/Services";
@@ -41,7 +42,9 @@ function App() {
           path: "/service/:id",
           element: <Details></Details>,
           loader: async ({ params }) => {
-            return fetch(`localhost/5000/service/${params.id}`);
+            return fetch(
+              `https://fitness-mate-server-side.vercel.app/services/${params.id}`
+            );
           },
         },
         {
@@ -49,6 +52,14 @@ function App() {
           element: (
             <PrivateRoute>
               <AddService></AddService>
+            </PrivateRoute>
+          ),
+        },
+        {
+          path: "/myReviews",
+          element: (
+            <PrivateRoute>
+              <MyReview></MyReview>
             </PrivateRoute>
           ),
         },
